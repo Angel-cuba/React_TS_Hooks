@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface Props {
+	title: string;
+}
+interface Task {
+	id: number;
+	title: string;
+	description: string;
+	completed: boolean;
 }
 
-export default App;
+export function App({ title }: Props) {
+	const [task, setTask] = useState<Task[]>([
+		{
+			id: 1,
+			title: 'Learning React',
+			description: 'With types',
+			completed: false,
+		},
+	]);
+	return (
+		<div className="App">
+			<h2>{title}</h2>
+			{task.map((t, index: number) => (
+				<div key={index}>
+					<h1>{t.title}</h1>
+				</div>
+			))}
+		</div>
+	);
+}
