@@ -1,5 +1,13 @@
-import React from 'react';
+import { Task } from '../interfaces/interfaces';
 
-export default function TaskCard() {
-	return <div>TaskCard</div>;
+interface Props {
+	task: Task;
+}
+
+export default function TaskCard({ task }: Props) {
+	return (
+		<div>
+			<h1>{task.title}</h1>
+		</div>
+	);
 }

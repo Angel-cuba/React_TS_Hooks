@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App title="Angel" />
+		<App title="React and Typescript" />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
