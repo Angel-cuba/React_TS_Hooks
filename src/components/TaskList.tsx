@@ -9,7 +9,7 @@ export default function TaskList({ tasks }: Props) {
 	return (
 		<>
 			{tasks.map((task, index: number) => (
-				<div key={index}>
+				<div key={index} className="col-md-4">
 					<TaskCard task={task} />
 				</div>
 			))}
