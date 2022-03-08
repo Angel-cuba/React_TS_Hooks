@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
 import { Props, Task } from './interfaces/interfaces';
 import Logo from './logo.svg';
@@ -26,7 +27,9 @@ export function App({ title }: Props) {
 
 			<main className="container p-4">
 				<div className="row">
-					<div className="col-md-4 text-white">Task Form</div>
+					<div className="col-md-4 text-white">
+						<TaskForm />
+					</div>
 					<div className="col-md-8">
 						<div className="row">
 							<TaskList tasks={tasks} />
