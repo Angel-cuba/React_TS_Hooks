@@ -2,8 +2,12 @@ export interface Props {
 	title: string;
 }
 export interface Task {
-	id: number;
+	id?: number;
 	title: string;
 	description: string;
-	completed: boolean;
+	completed?: boolean;
+}
+
+export interface NewTask {
+	addTask: (task: Task) => void;
 }
